@@ -31,7 +31,7 @@
         <nav class="flex justify-between items-center mb-4">
             <a href="/">
                 <img
-                class="w-24"
+                class="w-24 rounded"
                 src="{{asset('images/logo.png')}}"
                 alt=""
                 class="logo"
