@@ -9,9 +9,16 @@
         <p class="text-2xl text-gray-200 font-bold my-4">
         Find or post a cat that needs a home!
         </p>
+        @if (Auth::guest())
         <div>
             <a href="/register" class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black">Sign Up & Help a Cat find its Home
             </a>
         </div>
+        @else
+        <div>
+            <a href="../listings/create" class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black">Post a Cat
+            </a>
+        </div>
+        @endif
     </div>
 </section>
