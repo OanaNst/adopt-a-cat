@@ -1,7 +1,7 @@
 <x-layout>
     <x-card class="p-10 max-w-lg mx-auto mt-24">
         <header class="text-center">
-            <h2 class="text-2xl font-bold uppercase mb-1">Edit Gig</h2>
+            <h2 class="text-2xl font-bold uppercase mb-1">Edit cat post</h2>
             <p class="mb-4">Edit: {{$listing->title}}</p>
         </header>
 
@@ -11,34 +11,17 @@
             enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="mb-6">
-                <label
-                    for="company"
-                    class="inline-block text-lg mb-2">Company Name
-                </label>
-                <input
-                    type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
-                    name="company"
-                    value="{{$listing->company}}"
-                />
-
-                @error('company')
-                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-                @enderror
-
-            </div>
 
             <div class="mb-6">
                 <label 
                     for="title" 
-                    class="inline-block text-lg mb-2">Job Title
+                    class="inline-block text-lg mb-2">Cat Name
                 </label>
                 <input
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="title"
-                    placeholder="Example: Senior Laravel Developer"
+                    placeholder="Example: Chonky"
                     value="{{$listing->title}}"
                 />
 
@@ -51,13 +34,13 @@
             <div class="mb-6">
                 <label
                     for="location"
-                    class="inline-block text-lg mb-2">Job Location
+                    class="inline-block text-lg mb-2">Cat Location
                 </label>
                 <input
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="location"
-                    placeholder="Example: Remote, Boston MA, etc"
+                    placeholder="Example: Wangen, Zurich, Bern, etc."
                     value="{{$listing->location}}"
                 />
 
@@ -70,34 +53,17 @@
             <div class="mb-6">
                 <label 
                     for="email" 
-                    class="inline-block text-lg mb-2">Contact Email
+                    class="inline-block text-lg mb-2">>Human Contact Email
                 </label>
                 <input
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="email"
+                    placeholder="Example: cat-enthusiast@gmail.com"
                     value="{{$listing->email}}"
                 />
 
                 @error('email')
-                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-                @enderror
-
-            </div>
-
-            <div class="mb-6">
-                <label
-                    for="website"
-                    class="inline-block text-lg mb-2">Website/Application URL
-                </label>
-                <input
-                    type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
-                    name="website"
-                    value="{{$listing->website}}"
-                />
-
-                @error('website')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
 
@@ -112,7 +78,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="tags"
-                    placeholder="Example: Laravel, Backend, Postgres, etc"
+                    placeholder="Example: fat, lovebug, sleepy, etc"
                     value="{{$listing->tags}}"
                 />
 
@@ -125,7 +91,7 @@
             <div class="mb-6">
                 <label 
                     for="logo" 
-                    class="inline-block text-lg mb-2">Company Logo
+                    class="inline-block text-lg mb-2">Cat Photo
                 </label>
                 <input
                     type="file"
@@ -146,13 +112,12 @@
             <div class="mb-6">
                 <label
                     for="description"
-                    class="inline-block text-lg mb-2">Job Description
+                    class="inline-block text-lg mb-2">Cat Description
                 </label>
                 <textarea
                     class="border border-gray-200 rounded p-2 w-full"
                     name="description"
-                    rows="10"
-                    placeholder="Include tasks, requirements, salary, etc">
+                    rows="10">
 
                 {{$listing->description}}
                 </textarea>
